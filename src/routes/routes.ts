@@ -1,4 +1,4 @@
-import { addNoteHandler, deleteNoteByIdHandle, editNoteByIdHandler, getAllNotesHandler, getNoteByIdHandler } from './handler';
+import { addNoteHandler, deleteNoteByIdHandle, editNoteByIdHandler, getAllNotesHandler, getNoteByIdHandler } from '../handler/handler';
 import { ServerRoute } from '@hapi/hapi';
 
 export const routes: ServerRoute[] = [

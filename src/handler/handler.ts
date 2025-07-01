@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid'
-import { notes } from './notes'
-import type { NoteType } from './types'
+import { notes } from '../data/notes'
+import type { NoteType } from '../type/types'
 import { Lifecycle } from '@hapi/hapi'
 
 type NotePayload = {
