@@ -84,3 +84,37 @@ export const getNoteByIdHandler: Lifecycle.Method = (request, h) => {
   response.code(404)
   return response
 }
+
+export const editNoteByIdHandler: Lifecycle.Method = (request, h) => {
+  const { id } = request.params as NoteParams;
+
+  const { title, tags, body } = request.payload as NotePayload
+  const updatedAt: string = new Date().toISOString();
+
+  const index: number = notes.findIndex((note) => note.id === id)
+
+  if (index !== -1) {
+    notes[index] = {
+      ...notes[index],
+      title,
+      tags,
+      body,
+      updatedAt
+    }
+
+    const response = h.response({
+      status: 'success',
+      message: 'Catatan berhasil diperbarui'
+    })
+    response.code(200)
+    return response
+  }
+
+  const response = h.response({
+    status: 'fail',
+    message: 'Gagal memperbarui catatan. Id tidak ditemukan'
+  })
+
+  response.code(404)
+  return response
+}
