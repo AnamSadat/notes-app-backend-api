@@ -2,14 +2,14 @@
 
 ## Introduction
 
-RESTful API sederhana untuk aplikasi pencatatan (Notes App). Backend ini memungkinkan pengguna membuat, membaca, memperbarui, dan menghapus catatan.
+A simple RESTful API for a Notes App. This backend allows users to create, read, update, and delete notes.
 
 ## Technology
 
-- Programming Language: Typescript
-- Runtime: pnpm
-- Framework: Hapi.js
-- Linter: ESLint
+- **Programming Language:** Typescript
+- **Runtime:** pnpm
+- **Framework:** Hapi.js
+- **Linter:** ESLint
 
 ## Getting Started
 
@@ -51,14 +51,14 @@ pnpm run start
 notes-api-backend-api/
 ├── src/
 │   ├── data/
-│   │   └── notes.ts/
+│   │   └── notes.ts
 │   ├── handler/
-│   │   └── handler.ts/
+│   │   └── handler.ts
 │   ├── routes/
-│   │   └── routes.ts/
+│   │   └── routes.ts
 │   ├── type/
-│   │   └── type.ts/
-│   └── server.ts/
+│   │   └── type.ts
+│   └── server.ts
 ├── .gitignore
 ├── eslint.config.mjs
 ├── package.json
@@ -73,7 +73,7 @@ notes-api-backend-api/
 
 - Method: `POST`
 - Path: `/note`
-- Description: Endpoint for create note
+- Description: Endpoint for create note.
 - Request Body:
 
   ```json
@@ -109,7 +109,7 @@ notes-api-backend-api/
 
 ### 2. View Notes
 
-- Method: `GET`,
+- Method: `GET`
 - Path: `/note`
 - Description: Retrieves and displays a list of all available notes stored in the system.
 - Response Body:
