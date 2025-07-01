@@ -1,3 +1,8 @@
+/**
+ * @file handler.ts
+ * @description Contains route handlers for adding, retrieving, updating, and deleting notes.
+ */
+
 import { nanoid } from 'nanoid'
 import { notes } from '../data/notes'
 import type { NoteType } from '../type/types'
@@ -13,6 +18,13 @@ type NoteParams = {
   id: string
 }
 
+/**
+ * Adds a new note to the notes array.
+ *
+ * @param request - Hapi request object, expects payload with title, tags, and body.
+ * @param h - Hapi response toolkit.
+ * @returns Hapi response indicating success or failure.
+ */
 export const addNoteHandler: Lifecycle.Method = (request, h) => {
   const { title, tags, body } = request.payload as NotePayload
 
@@ -52,6 +64,11 @@ export const addNoteHandler: Lifecycle.Method = (request, h) => {
   return response
 }
 
+/**
+ * Retrieves all notes.
+ *
+ * @returns Hapi response containing all notes.
+ */
 export const getAllNotesHandler: Lifecycle.Method = () => ({
   status: 'success',
   data: {
@@ -60,6 +77,13 @@ export const getAllNotesHandler: Lifecycle.Method = () => ({
 
 })
 
+/**
+ * Retrieves a note by its ID.
+ *
+ * @param request - Hapi request object containing note ID in the params.
+ * @param h - Hapi response toolkit.
+ * @returns Hapi response with the found note or 404 error if not found.
+ */
 export const getNoteByIdHandler: Lifecycle.Method = (request, h) => {
   const { id } = request.params as NoteParams
 
@@ -85,6 +109,13 @@ export const getNoteByIdHandler: Lifecycle.Method = (request, h) => {
   return response
 }
 
+/**
+ * Updates an existing note by its ID.
+ *
+ * @param request - Hapi request object with updated title, tags, and body in payload.
+ * @param h - Hapi response toolkit.
+ * @returns Hapi response indicating success or 404 if the note is not found.
+ */
 export const editNoteByIdHandler: Lifecycle.Method = (request, h) => {
   const { id } = request.params as NoteParams;
 
@@ -119,6 +150,13 @@ export const editNoteByIdHandler: Lifecycle.Method = (request, h) => {
   return response
 }
 
+/**
+ * Deletes a note by its ID.
+ *
+ * @param request - Hapi request object with note ID in params.
+ * @param h - Hapi response toolkit.
+ * @returns Hapi response indicating success or failure if the ID is not found.
+ */
 export const deleteNoteByIdHandle: Lifecycle.Method = (request, h) => {
   const { id } = request.params as NoteParams
 
