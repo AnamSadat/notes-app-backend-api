@@ -1,4 +1,4 @@
-export type Notes = {
+export type NoteType = {
   id: string;
   title: string;
   tags: string[];

@@ -1,3 +1,3 @@
-import { Notes } from './types'
+import { NoteType } from './types'
 
-export const notes: Notes[] = []
+export const Notes: NoteType[] = []

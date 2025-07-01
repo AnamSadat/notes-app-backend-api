@@ -1,6 +1,6 @@
 import {nanoid} from 'nanoid'
-import { notes } from './notes'
-import { Notes } from './types'
+import { Notes } from './notes'
+import { NoteType } from './types'
 import { Lifecycle } from '@hapi/hapi'
 
 type NotePayload = {    
@@ -16,13 +16,13 @@ export const addNoteHandler: Lifecycle.Method = (request, h) => {
   const createAt: string = new Date().toISOString();
   const updateAt: string = createAt
 
-  const newNote: Notes = {
+  const newNote: NoteType = {
     title, tags, body, id, createAt, updateAt,
   }
 
-  notes.push(newNote)
+  Notes.push(newNote)
 
-  const isSuccess: boolean = notes.filter((note) => note.id === id).length > 0
+  const isSuccess: boolean = Notes.filter((note) => note.id === id).length > 0
 
   if(isSuccess){
     const response = h.response({
