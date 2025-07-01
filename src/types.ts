@@ -3,6 +3,6 @@ export type NoteType = {
   title: string;
   tags: string[];
   body: string;
-  createAt: string;
-  updateAt: string;    
+  createdAt: string;
+  updatedAt: string;    
 }
