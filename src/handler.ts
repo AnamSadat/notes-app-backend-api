@@ -1,4 +1,3 @@
-// import { Request, ResponseObject, ResponseToolkit } from '@hapi/hapi'
 import {nanoid} from 'nanoid'
 import { notes } from './notes'
 import { Notes } from './types'
@@ -9,10 +8,6 @@ type NotePayload = {
   tags: string[],
   body: string
 }
-
-// type NoteHandler = (
-//   request: Request & {payload: NotePayload},
-//   h: ResponseToolkit) => ResponseObject
 
 export const addNoteHandler: Lifecycle.Method = (request, h) => {
   const {title, tags, body } = request.payload as NotePayload
