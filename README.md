@@ -6,10 +6,12 @@ A simple RESTful API for a Notes App. This backend allows users to create, read,
 
 ## Technology
 
-- **Programming Language:** Typescript
+- **Language:** Typescript
 - **Runtime:** Node.js
 - **Framework:** Hapi.js
 - **Linter:** ESLint
+- **Package Manager:** pnpm
+- **Documentation:** Typedoc
 
 ## Getting Started
 
@@ -49,22 +51,26 @@ pnpm run start
 
 ```plaintext
 notes-api-backend-api/
-├── src/
-│   ├── data/
+├── .vscode/                     # VS Code settings (e.g., formatting, linting)
+│   └── settings.json
+├── doc/                         # Output folder for TypeDoc documentation
+├── src/                         # Source code directory
+│   ├── data/                    # Static/mock data (in-memory notes)
 │   │   └── notes.ts
-│   ├── handler/
+│   ├── handler/                 # Request handler functions (CRUD logic)
 │   │   └── handler.ts
-│   ├── routes/
+│   ├── routes/                  # API route definitions
 │   │   └── routes.ts
-│   ├── type/
+│   ├── type/                    # TypeScript type definitions
 │   │   └── type.ts
-│   └── server.ts
-├── .gitignore
-├── eslint.config.mjs
-├── package.json
-├── pnpm-lock.yaml
-├── tsconfig.json
-└── README.md
+│   └── server.ts                # Main entry point to initialize and start the Hapi server
+├── .gitignore                   # Files/folders to ignore by Git
+├── eslint.config.mjs            # ESLint configuration for code quality
+├── package.json                 # Project metadata and scripts
+├── pnpm-lock.yaml               # Lock file for reproducible installs (pnpm)
+├── tsconfig.json                # TypeScript compiler configuration
+├── typedoc.json                 # Configuration for TypeDoc generation
+└── README.md                    # Project description and instructions
 ```
 
 ## API Endpoint
@@ -246,3 +252,26 @@ notes-api-backend-api/
       "message": "Catatan gagal dihapus. Id catatan tidak ditemukan"
     }
     ```
+
+## Documentation
+
+This project uses [TypeDoc](https://typedoc.org/) to generate documentation from TypeScript code.
+
+### 1. Generate Doc
+
+```bash
+pnpm run doc
+
+# With open
+pnpm run doc:open
+```
+
+### 2. Output
+
+Documentation will be generated in the `doc/` folder.
+
+### 3. Open it manually
+
+```bash
+start doc/index.html
+```

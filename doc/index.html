@@ -1,0 +1,201 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>notes-app-backend-api</title><meta name="description" content="Documentation for notes-app-backend-api"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">notes-app-backend-api</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>notes-app-backend-api</h1></div><div class="tsd-panel tsd-typography"><h1 id="notes-app-backend-api" class="tsd-anchor-link">Notes App Backend API<a href="#notes-app-backend-api" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><h2 id="introduction" class="tsd-anchor-link">Introduction<a href="#introduction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>A simple RESTful API for a Notes App. This backend allows users to create, read, update, and delete notes.</p>
+<h2 id="technology" class="tsd-anchor-link">Technology<a href="#technology" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li><strong>Language:</strong> Typescript</li>
+<li><strong>Runtime:</strong> Node.js</li>
+<li><strong>Framework:</strong> Hapi.js</li>
+<li><strong>Linter:</strong> ESLint</li>
+<li><strong>Package Manager:</strong> pnpm</li>
+<li><strong>Documentation:</strong> Typedoc</li>
+</ul>
+<h2 id="getting-started" class="tsd-anchor-link">Getting Started<a href="#getting-started" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="1-clone-repository" class="tsd-anchor-link">1. Clone Repository<a href="#1-clone-repository" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">git</span><span class="hl-1"> </span><span class="hl-2">clone</span><span class="hl-1"> </span><span class="hl-2">https://github.com/AnamSadat/notes-app-backend-api.git</span><br/><span class="hl-0">cd</span><span class="hl-1"> </span><span class="hl-2">note-app-backend-api</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="2-install-dependencies" class="tsd-anchor-link">2. Install Dependencies<a href="#2-install-dependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">install</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="3-run-eslint" class="tsd-anchor-link">3. Run ESLint<a href="#3-run-eslint" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">lint</span><br/><br/><span class="hl-3"># Use fix</span><br/><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">lint:fix</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="3-development-server" class="tsd-anchor-link">3. Development Server<a href="#3-development-server" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-3"># development</span><br/><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">dev</span><br/><br/><span class="hl-3"># production</span><br/><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">start</span>
+</code><button type="button">Copy</button></pre>
+
+<h2 id="structure-project" class="tsd-anchor-link">Structure Project<a href="#structure-project" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="plaintext">notes-api-backend-api/
+├── src/
+│   ├── data/
+│   │   └── notes.ts
+│   ├── handler/
+│   │   └── handler.ts
+│   ├── routes/
+│   │   └── routes.ts
+│   ├── type/
+│   │   └── type.ts
+│   └── server.ts
+├── .gitignore
+├── eslint.config.mjs
+├── package.json
+├── pnpm-lock.yaml
+├── tsconfig.json
+└── README.md
+</code><button type="button">Copy</button></pre>
+
+<h2 id="api-endpoint" class="tsd-anchor-link">API Endpoint<a href="#api-endpoint" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="1-create-note" class="tsd-anchor-link">1. Create Note<a href="#1-create-note" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>
+<p>Method: <code>POST</code></p>
+</li>
+<li>
+<p>Path: <code>/note</code></p>
+</li>
+<li>
+<p>Description: Endpoint for create note.</p>
+</li>
+<li>
+<p>Request Body:</p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;title&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Note Title&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;tags&quot;</span><span class="hl-1">: [</span><span class="hl-2">&quot;Tag 1&quot;</span><span class="hl-1">, </span><span class="hl-2">&quot;Tag 2&quot;</span><span class="hl-1">],</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;body&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Note Content&quot;</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+<li>
+<p>Response Body:</p>
+<ul>
+<li>
+<p><code>201 (created)</code></p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;success&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;message&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Note has been successfully added&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;data&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;noteId&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;V09YExygSUYogwWJ&quot;</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+<li>
+<p><code>500 (internal server error)</code></p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;error&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;message&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Note failed to added&quot;</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-view-notes" class="tsd-anchor-link">2. View Notes<a href="#2-view-notes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>
+<p>Method: <code>GET</code></p>
+</li>
+<li>
+<p>Path: <code>/note</code></p>
+</li>
+<li>
+<p>Description: Retrieves and displays a list of all available notes stored in the system.</p>
+</li>
+<li>
+<p>Response Body:</p>
+<ul>
+<li>
+<p><code>200 (ok)</code></p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;success&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;data&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;notes&quot;</span><span class="hl-1">: [</span><br/><span class="hl-1">      {</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;id&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;notes-V1StGXR8_Z5jdHi6B-myT&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;title&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Catatan 1&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;createdAt&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;2020-12-23T23:00:09.686Z&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;updatedAt&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;2020-12-23T23:00:09.686Z&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;tags&quot;</span><span class="hl-1">: [</span><span class="hl-2">&quot;Tag 1&quot;</span><span class="hl-1">, </span><span class="hl-2">&quot;Tag 2&quot;</span><span class="hl-1">],</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;body&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Isi dari catatan 1&quot;</span><br/><span class="hl-1">      },</span><br/><span class="hl-1">      {</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;id&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;notes-V1StGXR8_98apmLk3mm1&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;title&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Catatan 2&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;createdAt&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;2020-12-23T23:00:09.686Z&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;updatedAt&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;2020-12-23T23:00:09.686Z&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;tags&quot;</span><span class="hl-1">: [</span><span class="hl-2">&quot;Tag 1&quot;</span><span class="hl-1">, </span><span class="hl-2">&quot;Tag 2&quot;</span><span class="hl-1">],</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;body&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Isi dari catatan 2&quot;</span><br/><span class="hl-1">      }</span><br/><span class="hl-1">    ]</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+<li>
+<p>if notes empty</p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;success&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;data&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;notes&quot;</span><span class="hl-1">: []</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-view-detail-note" class="tsd-anchor-link">3. View Detail Note<a href="#3-view-detail-note" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>
+<p>Method: <code>GET</code></p>
+</li>
+<li>
+<p>Path: <code>/notes/{id}</code></p>
+</li>
+<li>
+<p>Description: Click to view the full content of this note.</p>
+</li>
+<li>
+<p>Response Body:</p>
+<ul>
+<li>
+<p><code>200 (ok)</code></p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;success&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;data&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;note&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">      </span><span class="hl-4">&quot;id&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;notes-V1StGXR8_Z5jdHi6B-myT&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">&quot;title&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Catatan 1&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">&quot;createdAt&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;2020-12-23T23:00:09.686Z&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">&quot;updatedAt&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;2020-12-23T23:00:09.686Z&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">&quot;tags&quot;</span><span class="hl-1">: [</span><span class="hl-2">&quot;Tag 1&quot;</span><span class="hl-1">, </span><span class="hl-2">&quot;Tag 2&quot;</span><span class="hl-1">],</span><br/><span class="hl-1">      </span><span class="hl-4">&quot;body&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Isi dari catatan 1&quot;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+<li>
+<p><code>404 (not found)</code></p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;fail&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;message&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Catatan tidak ditemukan&quot;</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-update-note" class="tsd-anchor-link">4. Update Note<a href="#4-update-note" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>
+<p>Method: <code>PUT</code></p>
+</li>
+<li>
+<p>Path: <code>/notes/{id}</code></p>
+</li>
+<li>
+<p>Description: Edit and update this note's content.</p>
+</li>
+<li>
+<p>Request Body:</p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;title&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Judul Catatan Revisi&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;tags&quot;</span><span class="hl-1">: [</span><span class="hl-2">&quot;Tag 1&quot;</span><span class="hl-1">, </span><span class="hl-2">&quot;Tag 2&quot;</span><span class="hl-1">],</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;body&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Konten catatan&quot;</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+<li>
+<p>Response Body:</p>
+<ul>
+<li>
+<p><code>200 (ok)</code></p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;success&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;message&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Catatan berhasil diperbaharui&quot;</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+<li>
+<p><code>404 (not found)</code></p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;fail&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;message&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Gagal memperbarui catatan. Id catatan tidak ditemukan&quot;</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-delete-note" class="tsd-anchor-link">5. Delete Note<a href="#5-delete-note" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>
+<p>Method: <code>DELETE</code></p>
+</li>
+<li>
+<p>Path: <code>/notes/{id}</code></p>
+</li>
+<li>
+<p>Description: Permanently remove this note.</p>
+</li>
+<li>
+<p>Response Body:</p>
+<ul>
+<li>
+<p><code>200 (ok)</code></p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;success&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;message&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Catatan berhasil dihapus&quot;</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+<li>
+<p><code>404 (not found)</code></p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;fail&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">&quot;message&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Catatan gagal dihapus. Id catatan tidak ditemukan&quot;</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="documentation" class="tsd-anchor-link">Documentation<a href="#documentation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>This project uses <a href="https://typedoc.org/">TypeDoc</a> to generate documentation from TypeScript code.</p>
+<h3 id="1-generate-doc" class="tsd-anchor-link">1. Generate Doc<a href="#1-generate-doc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">doc</span><br/><br/><span class="hl-3"># With open</span><br/><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">doc:open</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="2-output" class="tsd-anchor-link">2. Output<a href="#2-output" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Documentation will be generated in the <code>docs/</code> folder.</p>
+<h3 id="3-open-it-manually" class="tsd-anchor-link">3. Open it manually<a href="#3-open-it-manually" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">start</span><span class="hl-1"> </span><span class="hl-2">doc/index.html</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#notes-app-backend-api"><span>Notes <wbr/>App <wbr/>Backend <wbr/>API</span></a><ul><li><a href="#introduction"><span>Introduction</span></a></li><li><a href="#technology"><span>Technology</span></a></li><li><a href="#getting-started"><span>Getting <wbr/>Started</span></a></li><li><ul><li><a href="#1-clone-repository"><span>1. <wbr/>Clone <wbr/>Repository</span></a></li><li><a href="#2-install-dependencies"><span>2. <wbr/>Install <wbr/>Dependencies</span></a></li><li><a href="#3-run-eslint"><span>3. <wbr/>Run <wbr/>ES<wbr/>Lint</span></a></li><li><a href="#3-development-server"><span>3. <wbr/>Development <wbr/>Server</span></a></li></ul></li><li><a href="#structure-project"><span>Structure <wbr/>Project</span></a></li><li><a href="#api-endpoint"><span>API <wbr/>Endpoint</span></a></li><li><ul><li><a href="#1-create-note"><span>1. <wbr/>Create <wbr/>Note</span></a></li><li><a href="#2-view-notes"><span>2. <wbr/>View <wbr/>Notes</span></a></li><li><a href="#3-view-detail-note"><span>3. <wbr/>View <wbr/>Detail <wbr/>Note</span></a></li><li><a href="#4-update-note"><span>4. <wbr/>Update <wbr/>Note</span></a></li><li><a href="#5-delete-note"><span>5. <wbr/>Delete <wbr/>Note</span></a></li></ul></li><li><a href="#documentation"><span>Documentation</span></a></li><li><ul><li><a href="#1-generate-doc"><span>1. <wbr/>Generate <wbr/>Doc</span></a></li><li><a href="#2-output"><span>2. <wbr/>Output</span></a></li><li><a href="#3-open-it-manually"><span>3. <wbr/>Open it manually</span></a></li></ul></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">notes-app-backend-api</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
