@@ -7,7 +7,7 @@ A simple RESTful API for a Notes App. This backend allows users to create, read,
 ## Technology
 
 - **Programming Language:** Typescript
-- **Runtime:** pnpm
+- **Runtime:** Node.js
 - **Framework:** Hapi.js
 - **Linter:** ESLint
 
