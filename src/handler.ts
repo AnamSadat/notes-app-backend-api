@@ -3,7 +3,7 @@ import { notes } from './notes'
 import type { NoteType } from './types'
 import { Lifecycle } from '@hapi/hapi'
 
-type NotePayload = {    
+type NotePayload = {
   title: string,
   tags: string[],
   body: string
@@ -14,7 +14,7 @@ type NoteParams = {
 }
 
 export const addNoteHandler: Lifecycle.Method = (request, h) => {
-  const {title, tags, body } = request.payload as NotePayload
+  const { title, tags, body } = request.payload as NotePayload
 
   const id: string = nanoid(16)
   const createdAt: string = new Date().toISOString();
@@ -28,7 +28,7 @@ export const addNoteHandler: Lifecycle.Method = (request, h) => {
 
   const isSuccess: boolean = notes.filter((note) => note.id === id).length > 0
 
-  if(isSuccess){
+  if (isSuccess) {
     const response = h.response({
       status: 'success',
       message: 'Catatan berhasil ditambahkan',
@@ -47,7 +47,7 @@ export const addNoteHandler: Lifecycle.Method = (request, h) => {
     message: 'Catatan gagal ditambahkan',
 
   })
-  
+
   response.code(500)
   return response
 }
@@ -57,7 +57,7 @@ export const getAllNotesHandler: Lifecycle.Method = () => ({
   data: {
     notes,
   },
-  
+
 })
 
 export const getNoteByIdHandler: Lifecycle.Method = (request, h) => {
@@ -115,6 +115,29 @@ export const editNoteByIdHandler: Lifecycle.Method = (request, h) => {
     message: 'Gagal memperbarui catatan. Id tidak ditemukan'
   })
 
+  response.code(404)
+  return response
+}
+
+export const deleteNoteByIdHandle: Lifecycle.Method = (request, h) => {
+  const { id } = request.params as NoteParams
+
+  const index: number = notes.findIndex((note) => note.id === id)
+
+  if (index !== -1) {
+    notes.splice(index, 1);
+    const response = h.response({
+      status: 'success',
+      message: 'Catatan berhasil dihapus',
+    })
+    response.code(200)
+    return response
+  }
+
+  const response = h.response({
+    status: 'fail',
+    message: 'Catatan gagal dihapus. Id tidak ditemukan'
+  })
   response.code(404)
   return response
 }
