@@ -45,7 +45,7 @@ export const addNoteHandler: Lifecycle.Method = (request, h) => {
       status: 'success',
       message: 'Catatan berhasil ditambahkan',
       data: {
-        notesId: id,
+        noteId: id,
       },
     })
     response.code(201)
@@ -98,8 +98,6 @@ export const getNoteByIdHandler: Lifecycle.Method = (request, h) => {
       },
     }
   }
-
-  console.log(note)
 
   const response = h.response({
     status: 'fail',
