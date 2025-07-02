@@ -18,33 +18,34 @@ A simple RESTful API for a Notes App. This backend allows users to create, read,
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/AnamSadat/notes-app-backend-api.git
-cd note-app-backend-api
+$ git clone https://github.com/AnamSadat/notes-app-backend-api.git
+
+$ cd note-app-backend-api
 ```
 
 ### 2. Install Dependencies
 
 ```bash
-pnpm install
+$ pnpm install
 ```
 
 ### 3. Run ESLint
 
 ```bash
-pnpm run lint
+$ pnpm run lint
 
 # Use fix
-pnpm run lint:fix
+$ pnpm run lint:fix
 ```
 
 ### 3. Development Server
 
 ```bash
 # development
-pnpm run dev
+$ pnpm run dev
 
 # production
-pnpm run start
+$ pnpm run start
 ```
 
 ## Structure Project
@@ -260,10 +261,10 @@ This project uses [TypeDoc](https://typedoc.org/) to generate documentation from
 ### 1. Generate Doc
 
 ```bash
-pnpm run doc
+$ pnpm run doc
 
 # With open
-pnpm run doc:open
+$ pnpm run doc:open
 ```
 
 ### 2. Output

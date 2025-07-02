@@ -4,13 +4,14 @@
   "description": "Simple Backend API for Notes App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev src/server.ts",
     "start": "ts-node src/server.ts",
     "lint:fix": "npx eslint . --fix",
     "lint": "npx eslint .",
     "doc": "rimraf docs && typedoc",
-    "doc:open": "pnpm doc && start doc/index.html"
+    "doc:open": "pnpm doc && start doc/index.html",
+    "test": "jest --config jest.config.ts",
+    "test:watch": "vitest"
   },
   "keywords": [
     "node",
@@ -20,6 +21,8 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.30.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.10",
     "@typescript-eslint/eslint-plugin": "^8.35.0",
     "@typescript-eslint/parser": "^8.35.0",
     "eslint": "^9.30.0",
@@ -27,6 +30,7 @@
     "eslint-plugin-prettier": "^5.5.1",
     "globals": "^16.2.0",
     "open-cli": "^8.0.0",
+    "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typedoc": "^0.28.7",
