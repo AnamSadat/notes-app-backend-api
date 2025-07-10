@@ -25,7 +25,7 @@ type NoteParams = {
  */
 export const index: Lifecycle.Method = (request, h) => {
   const response = h.response({
-    status: 'oke',
+    status: 'success',
     message: 'Welcome to Backend API Notes App'
   })
 

@@ -76,6 +76,22 @@ notes-api-backend-api/
 
 ## API Endpoint
 
+### 1. Index Route
+
+- Method: `GET`
+- Path: `/`
+- Description: Endpoint for status connect
+- Response Body:
+
+  - `200 (ok)`
+
+    ```json
+    {
+      "status": "success",
+      "message": "Welcome to Backend API Notes App"
+    }
+    ```
+
 ### 1. Create Note
 
 - Method: `POST`
