@@ -4,7 +4,7 @@
  */
 
 import Hapi from '@hapi/hapi';
-import { routes } from './routes/routes';
+import { routes } from './routes/routes.ts';
 
 /**
  * Initializes and starts the Hapi server.

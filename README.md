@@ -79,7 +79,7 @@ notes-api-backend-api/
 ### 1. Create Note
 
 - Method: `POST`
-- Path: `/note`
+- Path: `/notes`
 - Description: Endpoint for create note.
 - Request Body:
 
@@ -117,7 +117,7 @@ notes-api-backend-api/
 ### 2. View Notes
 
 - Method: `GET`
-- Path: `/note`
+- Path: `/notes`
 - Description: Retrieves and displays a list of all available notes stored in the system.
 - Response Body:
 
@@ -276,3 +276,5 @@ Documentation will be generated in the `doc/` folder.
 ```bash
 start doc/index.html
 ```
+
+## Setup Postman Testing
