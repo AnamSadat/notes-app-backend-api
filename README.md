@@ -92,7 +92,7 @@ notes-api-backend-api/
     }
     ```
 
-### 1. Create Note
+### 2. Create Note
 
 - Method: `POST`
 - Path: `/notes`
@@ -130,7 +130,7 @@ notes-api-backend-api/
     }
     ```
 
-### 2. View Notes
+### 3. View Notes
 
 - Method: `GET`
 - Path: `/notes`
@@ -176,7 +176,7 @@ notes-api-backend-api/
     }
     ```
 
-### 3. View Detail Note
+### 4. View Detail Note
 
 - Method: `GET`
 - Path: `/notes/{id}`
@@ -210,7 +210,7 @@ notes-api-backend-api/
     }
     ```
 
-### 4. Update Note
+### 5. Update Note
 
 - Method: `PUT`
 - Path: `/notes/{id}`
@@ -245,7 +245,7 @@ notes-api-backend-api/
     }
     ```
 
-### 5. Delete Note
+### 6. Delete Note
 
 - Method: `DELETE`
 - Path: `/notes/{id}`
