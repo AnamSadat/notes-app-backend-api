@@ -19,6 +19,21 @@ type NoteParams = {
 }
 
 /**
+ * Index for beggin API
+ *
+ * @returns Hapi response for API connect
+ */
+export const index: Lifecycle.Method = (request, h) => {
+  const response = h.response({
+    status: 'oke',
+    message: 'Welcome to Backend API Notes App'
+  })
+
+  response.code(200)
+  return response
+}
+
+/**
  * Adds a new note to the notes array.
  *
  * @param request - Hapi request object, expects payload with title, tags, and body.
